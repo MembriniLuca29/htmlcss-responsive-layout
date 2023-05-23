@@ -7,8 +7,109 @@
 }
 
 
+/* ROOT */
 
-/*  general */
-*{
-    font-family: Arial, Helvetica, sans-serif;
+:root{
+--main-color:#0084FD;
+--background-color1: #B5DDFF;
+--background-color2: #B5DDFF;
+
+}
+
+/* HEADER */
+
+header{
+    position: fixed;
+    background-color: var(--main-color);
+    width: 100%;
+    padding: 0 5%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link-nav{
+    display: none;
+}
+
+
+/* MAIN */
+
+.firs-container{
+    padding-top: 4em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-column{
+    background-color: var(--background-color1);
+    width: 100%;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 6%;
+    
+}
+
+.my-column>i{
+    color: var(--main-color);
+    font-size: 5em;
+}
+
+.phone>img{
+    width: 16em
+}
+
+/* section2 */
+
+.second-container{
+    
+}
+
+/* TABLET */
+
+@media screen  and (min-width:768px) {
+    
+
+ .firs-container{
+   justify-content: space-between
+}
+
+.my-column{
+    width: calc( ( 100% / 3 ) - 6%);
+    margin: 1%;
+}
+
+.my-column:first-child{
+    width: calc((100% / 3) * 2 - 4%) ;
+    flex-direction: row;
+   
+}
+
+.phone>img{
+    width: 20em
+}
+}
+
+
+
+
+
+/* DESKTOP */
+
+@media screen  and (min-width:992px) {
+    
+    /* header */
+
+    .hamburger{
+        display: none;
+    }
+
+    .link-nav{
+        display: flex;
+    }
 }
